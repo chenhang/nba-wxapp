@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "component-share-button": "/components/shareButton/shareButton",
+    "ff-canvas": "/f2-canvas/f2-canvas"
+  }
+}

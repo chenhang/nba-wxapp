@@ -1,0 +1,29 @@
+<view class="header" wx:if="{{match.teams}}">
+  <!-- <view class="match-info">
+    <text>{{match.stageName}}</text>
+    <text>{{match.startHumanDate}}</text>
+  </view> -->
+
+  <view class="teams">
+    <view class="team" wx:for="{{match.teams}}" wx:key="id">
+      <!-- <text class="team-winner icon-crown" wx:if="{{match.winner.id == item.id}}"></text> -->
+      <image class="team-logo" src="http://stats.nba.com/media/img/teams/logos/{{item}}_logo.svg" mode="aspectFit"></image>
+      <text class="team-name industry">{{item}}</text>
+    </view>
+  </view>
+
+  <!-- <view class="match-status" wx:if="{{match.state == 'PENDING' && !started}}">未开始</view>
+  <view class="match-status" wx:elif="{{match.state == 'PENDING' && started}}">进行中</view> -->
+  <view class="match-scores industry">{{match.total_pts[0]}}:{{match.total_pts[1]}}</view>
+</view>
+
+<view class="page-main container">
+  <ff-canvas id="points-area" canvas-id="points-area" opts="{{ drawPts }}"></ff-canvas>
+  <ff-canvas id="four-factor-bar" canvas-id="four-factor-bar" opts="{{ drawFourFactor }}"></ff-canvas>
+  <view class='shotlog'>
+    <ff-canvas id="shotlog-1" canvas-id="shotlog-1" opts="{{ drawShotLogAway }}"></ff-canvas>
+    <ff-canvas id="shotlog-0" canvas-id="shotlog-0" opts="{{ drawShotLogHome }}"></ff-canvas>
+  </view>
+
+  <component-share-button url="/pages/schedule/index"></component-share-button>
+</view>

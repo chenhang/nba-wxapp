@@ -1,0 +1,123 @@
+page {
+  padding: 20rpx 0;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 80rpx;
+}
+
+.btn {
+  padding: 0 30rpx;
+  font-size: 60rpx;
+  line-height: 80rpx;
+  color: #ccc;
+}
+
+.btn.active {
+  color: #999;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.init {
+  padding: 200rpx 0;
+  font-size: 50rpx;
+  color: #999;
+}
+
+.matches-day {
+  position: relative;
+  margin: 30rpx 30rpx 40rpx;
+  padding: 30rpx 0;
+  border-radius: 30rpx;
+  box-shadow: 4rpx 4rpx 70rpx -24rpx #999;
+  background: #fff;
+}
+
+.matches-title {
+  color: #555;
+  margin-bottom: 30rpx;
+}
+
+.match-item {
+  padding: 10rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.match-item.active {
+  background-color: #f9f9f9;
+}
+
+.match-item[data-disabled="true"] {
+  pointer-events: none;
+}
+
+.matches-header {
+  margin-bottom: 10rpx;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+
+.match-team {
+  width: calc(50% - 60rpx);
+  color: #555;
+}
+
+.match-team .industry {
+  font-size: 45rpx;
+  line-height: 80rpx;
+  letter-spacing: 2rpx;
+}
+
+.match-left {
+  text-align: right;
+}
+
+.match-right {
+  text-align: left;
+}
+
+.match-time {
+  margin: 0 10rpx;
+  width: 100rpx;
+  font-size: 28rpx;
+  background-color: #f9f9f9;
+  border-radius: 8rpx;
+}
+
+.match-scores {
+  width: 180rpx;
+  color: #555;
+  font-size: 40rpx;
+  line-height: 80rpx;
+}
+
+.team-logo {
+  display: inline-block;
+  margin: 0 20rpx;
+  width: 75rpx;
+  height: 75rpx;
+  vertical-align: top;
+}
+
+.team-empty {
+  color: #999;
+}
+
+.icon-placeholder {
+  margin: 0 30rpx;
+  color: #999;
+  font-size: 60rpx;
+  line-height: 80rpx;
+  text-align: center;
+  vertical-align: middle;
+}

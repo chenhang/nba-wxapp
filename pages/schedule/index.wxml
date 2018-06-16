@@ -1,0 +1,40 @@
+<view class="header">
+  <view class="btn icon-chevron-left" bindtap="changeWeek" data-week="{{week + 1}}" hover-class="active"></view>
+  <view class="page-title">{{page_title}}</view>
+  <view class="btn icon-chevron-right" bindtap="changeWeek" data-week="{{week - 1}}" hover-class="active"></view>
+</view>
+
+<view class="init" wx:if="{{isEmpty}}">无比赛</view>
+
+<view class="matches-day" wx:for="{{matches}}" wx:key="index">
+  <view class="matches-title">{{index}}</view>
+  <block wx:for="{{item}}" wx:for-item="match" wx:key="id">
+    <navigator class="match-item" url="/pages/schedule/index?id={{match.id}}" hover-class="active">
+      <view class="match-team match-left">
+        <block wx:if="{{match.teams[0]}}">
+          <text class="industry">{{match.teams[0]}}</text>
+          <image class="team-logo" src="http://stats.nba.com/media/img/teams/logos/{{match.teams[0]}}_logo.svg" mode="aspectFit"></image>
+        </block>
+        <block wx:else>
+          <text class="team-empty">--</text>
+          <text class="icon-placeholder"></text>
+        </block>
+      </view>
+
+      <!-- <view class="match-time" wx:if="{{match.state == 'PENDING'}}">{{match.startTime}}</view> -->
+      <view class="match-scores industry">{{match.total_pts[0]}} : {{match.total_pts[1]}}</view>
+
+      <view class="match-team match-right">
+        <block wx:if="{{match.teams[1]}}">
+          <image class="team-logo" src="http://stats.nba.com/media/img/teams/logos/{{match.teams[1]}}_logo.svg" mode="aspectFit"></image>
+          <text class="industry">{{match.teams[1]}}</text>
+        </block>
+        <block wx:else>
+          <text class="icon-placeholder"></text>
+          <text class="team-empty">--</text>
+        </block>
+      </view>
+    </navigator>
+  </block>
+
+</view>

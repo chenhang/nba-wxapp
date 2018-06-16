@@ -1,0 +1,6 @@
+<button wx:if="{{showShareButton}}" class="share-button" open-type="share" hover-class="active">
+  <text class="icon-share"></text>
+  <text>分享</text>
+</button>
+
+<navigator wx:else url="{{url}}" class="share-button" open-type="switchTab" hover-class="active">返回首页</navigator>

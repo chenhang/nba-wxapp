@@ -1,0 +1,102 @@
+.header {
+  position: relative;
+  padding: 40rpx 40rpx 0;
+  text-align: center;
+}
+
+.match-info {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.match-status {
+  position: absolute;
+  right: 0;
+  bottom: 230rpx;
+  left: 0;
+  margin: auto;
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #000;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.match-scores {
+  position: absolute;
+  right: 0;
+  bottom: 120rpx;
+  left: 0;
+  margin: auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 80rpx;
+  letter-spacing: 8rpx;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50rpx;
+}
+
+.team {
+  position: relative;
+}
+
+.team-logo {
+  display: block;
+  margin: auto;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.team-name {
+  line-height: 120rpx;
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+  color: #555;
+}
+
+.match-info text {
+  display: block;
+  color: #555;
+}
+
+.page-main {
+  padding: 0;
+}
+
+.container {
+  position: absolute;
+  top: 300rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+ff-canvas {
+  height: 30%;
+}
+
+.shotlog {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.shotlog > ff-canvas {
+  width: 50%;
+    height: 100%;
+}
+
+.share-button {
+  height: 10%;
+}

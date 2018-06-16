@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/schedule/index",
+    "pages/matches/show"
+  ],
+  "window": {
+    "backgroundColor": "#F2F5F6",
+    "backgroundColorTop": "#F2F5F6",
+    "backgroundColorBottom": "#F2F5F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F2F5F6",
+    "navigationBarTitleText": "Rimzero 赛后统计",
+    "navigationBarTextStyle": "black"
+  }
+}
